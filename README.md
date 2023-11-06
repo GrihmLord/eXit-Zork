@@ -1,12 +1,12 @@
-# eXitZorkGame
+# eXitZork
 
-![GitHub last commit](https://img.shields.io/github/last-commit/GrihmLord/eXitZorkGame)
-![GitHub issues](https://img.shields.io/github/issues/GrihmLord/eXitZorkGame)
-![GitHub stars](https://img.shields.io/github/stars/GrihmLord/eXitZorkGame)
-![GitHub forks](https://img.shields.io/github/forks/GrihmLord/eXitZorkGame)
-![License](https://img.shields.io/github/license/GrihmLord/eXitZorkGame)
+![GitHub last commit](https://img.shields.io/github/last-commit/GrihmLord/eXitZork)
+![GitHub issues](https://img.shields.io/github/issues/GrihmLord/eXitZork)
+![GitHub stars](https://img.shields.io/github/stars/GrihmLord/eXitZork)
+![GitHub forks](https://img.shields.io/github/forks/GrihmLord/eXitZork)
+![License](https://img.shields.io/github/license/GrihmLord/eXitZork)
 
-eXitZorkGame is an immersive text-based adventure game that brings together the nostalgia of classic text adventures with the sophistication of modern interactive fiction. Players will navigate through a rich narrative by typing commands, exploring environments, and solving puzzles.
+eXitZork is an immersive text-based adventure game that brings together the nostalgia of classic text adventures with the sophistication of modern interactive fiction. Players will navigate through a rich narrative by typing commands, exploring environments, and solving puzzles.
 
 ## Table of Contents
 
@@ -46,7 +46,7 @@ Follow these steps to get your development environment set up:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/GrihmLord/eXitZorkGame.git
+   git clone https://github.com/GrihmLord/eXitZork.git
    ```
 
 2. Install dependencies:
@@ -82,17 +82,17 @@ Additional notes about how to deploy this on a live system will be provided late
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/GrihmLord/eXitZorkGame/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/GrihmLord/eXitZork/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GrihmLord/eXitZorkGame/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GrihmLord/eXitZork/tags).
 
 ## Authors
 
 - **Your Name** - *Initial work* - [GrihmLord](https://github.com/GrihmLord)
 
-See also the list of [contributors](https://github.com/GrihmLord/eXitZorkGame/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/GrihmLord/eXitZork/contributors) who participated in this project.
 
 ## License
 
