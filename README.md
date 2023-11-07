@@ -6,7 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/GrihmLord/eXitZork)
 ![License](https://img.shields.io/github/license/GrihmLord/eXitZork)
 
-eXitZork is an immersive text-based adventure game that brings together the nostalgia of classic text adventures with the sophistication of modern interactive fiction. Players will navigate through a rich narrative by typing commands, exploring environments, and solving puzzles.
+eXitZork is an immersive text-based adventure game that combines the intrigue of cyberpunk narratives like Mr. Robot with the classic gameplay of Zork. Players will navigate through a rich narrative by typing commands, exploring environments, and solving puzzles, all while making decisions that shape the course of the story.
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ eXitZork is an immersive text-based adventure game that brings together the nost
 
 ## Introduction
 
-This project aims to deliver a text-based gaming experience that can be enjoyed on both iOS and Android platforms. It is built using React Native to ensure a seamless cross-platform experience.
+eXitZork offers a text-based gaming experience enriched with complex characters, deep storylines, and moral quandaries. It is designed to be played on both iOS and Android platforms, built using React Native for a seamless cross-platform experience.
 
 ## Getting Started
 
@@ -49,17 +49,25 @@ Follow these steps to get your development environment set up:
    git clone https://github.com/GrihmLord/eXitZork.git
    ```
 
-2. Install dependencies:
+2.Install dependencies:
 
    ```bash
-   cd eXitZorkGame
+   cd eXitZork
    npm install
    ```
 
-3. Start the React Native server:
+3.Start the React Native server:
 
    ```bash
    npx react-native start
+   ```
+
+4.Run the application on your device or emulator:
+
+   ```bash
+   npx react-native run-android
+   # or
+   npx react-native run-ios
    ```
 
 ### Running the Tests
@@ -90,7 +98,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **Your Name** - *Initial work* - [GrihmLord](https://github.com/GrihmLord)
+- **GrihmLord** - *Initial work* - [GrihmLord](https://github.com/GrihmLord)
 
 See also the list of [contributors](https://github.com/GrihmLord/eXitZork/contributors) who participated in this project.
 
@@ -101,5 +109,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Inspiration from classic text-based adventure games and modern cyberpunk fiction
+- Special thanks to the open-source community for their invaluable contributions

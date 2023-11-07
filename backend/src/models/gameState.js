@@ -20,3 +20,18 @@ const gameStateSchema = new Schema({
 });
 
 module.exports = mongoose.model('GameState', gameStateSchema);
+
+
+// backend/src/game/GameState.js
+
+class GameState {
+  constructor() {
+    this.inventory = [];
+    this.currentScene = {};
+    // ... other state properties
+  }
+
+  // Methods to update state, like changing scenes, updating inventory, etc.
+}
+
+module.exports = GameState;

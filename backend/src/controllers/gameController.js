@@ -48,3 +48,22 @@ async function handleGameLogic(gameState, action) {
   }
   return gameState;
 }
+
+// backend/src/controllers/gameController.js
+
+const actions = require('../game/actions');
+const gameService = require('../services/gameService');
+
+const processAction = async (req, res) => {
+  // Logic to process player action
+};
+
+const processCommand = async (playerId, command) => {
+  // Use the actions and gameService to process the command
+  // ...
+};
+
+module.exports = {
+  processAction,
+  processCommand
+};

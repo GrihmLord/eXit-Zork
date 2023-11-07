@@ -1,0 +1,89 @@
+{
+    "title": "eXit",
+    "background": "In a world where mega-corporations have merged with government entities, the lines between reality and the digital realm have blurred. You play as a hacker, part of a rogue group known as 'The Fringe,' who has discovered a conspiracy that could lead to the collapse of the societal structure. Your mission is to dive into the depths of the digital and real worlds to expose the truth and bring down the entities that threaten freedom and privacy.",
+    "acts": [
+      {
+        "name": "Awakening",
+        "scenes": [
+          {
+            "id": "revelation",
+            "title": "The Revelation",
+            "description": "Your screen flickers with the urgency of an encrypted message. It speaks of a new AI that can breach any system—a digital Pandora's Box.",
+            "options": [
+              {
+                "text": "Attempt to decrypt the message",
+                "leadsTo": "dive"
+              },
+              {
+                "text": "Ignore the message and continue your current task",
+                "leadsTo": "escape"
+              }
+            ],
+            "commands": [
+              {
+                "verb": "decrypt",
+                "noun": "message",
+                "action": "You run your custom decryption algorithm. The text slowly unscrambles to reveal its secrets.",
+                "leadsTo": "dive"
+              }
+            ]
+          },
+          {
+            "id": "dive",
+            "title": "The Dive",
+            "description": "You stand before the monolithic facade of NexGen Tech, its digital locks inviting a challenge. Inside, data that could unravel the AI's mysteries awaits.",
+            "options": [
+              {
+                "text": "Hack the front door's electronic lock",
+                "leadsTo": "inside_nexgen"
+              },
+              {
+                "text": "Look for another way in",
+                "leadsTo": "side_entrance"
+              }
+            ],
+            "commands": [
+              {
+                "verb": "hack",
+                "noun": "lock",
+                "action": "Your fingers dance across the portable keypad, injecting a stream of code into the lock's defenses.",
+                "leadsTo": "inside_nexgen"
+              }
+            ]
+          },
+          {
+            "id": "escape",
+            "title": "The Escape",
+            "description": "Alarms blare as you navigate a labyrinth of corridors. Each turn is a gamble, each door a new risk.",
+            "options": [
+              {
+                "text": "Take the left corridor",
+                "leadsTo": "dead_end"
+              },
+              {
+                "text": "Take the right corridor",
+                "leadsTo": "exit"
+              }
+            ],
+            "commands": [
+              {
+                "verb": "run",
+                "noun": "right",
+                "action": "You sprint down the right corridor, the sounds of pursuit fading behind you.",
+                "leadsTo": "exit"
+              }
+            ]
+          }
+        ]
+      }
+      
+    ],
+    "features": {
+      "puzzles": "Intricate puzzles that require logical thinking and hacking skills.",
+      "decisions": "Moral choices that affect the story's outcome.",
+      "exploration": "Descriptions of both real and digital worlds that players can explore.",
+      "combat": "Text-based combat that involves outsmarting security systems and rival hackers.",
+      "characterDevelopment": "Interactions with NPCs that have their own backstories and can aid or hinder your progress."
+    }
+  }
+  

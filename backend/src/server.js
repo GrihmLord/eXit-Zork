@@ -1,25 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const gameService = require('./services/gameService');
+const gameRoutes = require('./routes/gameRoutes');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/cybertext', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/exitZorkGame', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
-app.use(express.json());
+// Use Routes
+app.use('/api/game', gameRoutes);
 
-// Endpoint to process commands
-app.post('/command', async (req, res) => {
-  try {
-    const { command, playerId } = req.body;
-    const result = await gameService.processCommand(playerId, command);
-    res.json(result);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-});
-
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
-});
+app.listen(port, () => console.log(`Server started on port ${port}`));

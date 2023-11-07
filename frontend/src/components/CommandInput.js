@@ -39,3 +39,29 @@ const styles = StyleSheet.create({
 });
 
 export default CommandInput;
+
+
+import React, { useState } from 'react';
+import { sendCommand } from '../utils/api';
+
+const CommandInput = () => {
+  const [input, setInput] = useState('');
+
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  };
+
+  const handleSubmit = async () => {
+    const response = await sendCommand(input);
+    // Display the response to the user
+  };
+
+  return (
+    <div>
+      <input type="text" value={input} onChange={handleInputChange} />
+      <button onClick={handleSubmit}>Submit</button>
+    </div>
+  );
+};
+
+export default CommandInput;
