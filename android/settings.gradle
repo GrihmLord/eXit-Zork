@@ -1,17 +1,22 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        mavenCentral()
         google()
-        // 👇 Tell Gradle to also look inside your node_modules!
-        maven {
-            url("$rootDir/../node_modules/react-native/android")
-        }
+        mavenCentral()
+        maven { url("$rootDir/../node_modules/react-native/android") }
     }
-    plugins {
-        id("com.facebook.react") version("0.72.17") apply(false)
+    includeBuild("../node_modules/react-native-gradle-plugin")
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url("$rootDir/../node_modules/react-native/android") }
     }
 }
 
 rootProject.name = "eXitZork"
-include ':app'
+
+include(":app")
