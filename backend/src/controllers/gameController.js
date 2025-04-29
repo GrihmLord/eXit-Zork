@@ -9,7 +9,6 @@ exports.processAction = async (req, res) => {
     let gameState = await GameState.findOne({playerId});
 
     if (!gameState) {
-      // If the game state does not exist, create a new one
       gameState = new GameState({
         playerId,
         currentRoom: 'startRoom',
@@ -17,13 +16,9 @@ exports.processAction = async (req, res) => {
       });
     }
 
-    // Parse the action using the CommandParser utility
     const parsedAction = CommandParser.parse(action);
-
-    // Update the game state based on the parsed action
     const updatedGameState = await handleGameLogic(gameState, parsedAction);
 
-    // Save the updated game state
     await updatedGameState.save();
 
     res.json({message: 'Action processed', gameState: updatedGameState});
@@ -34,46 +29,40 @@ exports.processAction = async (req, res) => {
 };
 
 async function handleGameLogic(gameState, action) {
-  let itemIndex; // Move declaration outside switch
+  let existingItem;
 
   switch (action.type) {
     case 'MOVE':
-      // Handle player movement
       gameState.currentRoom = action.payload.room;
       break;
+
     case 'PICK_UP':
-      // Handle picking up an item
-      itemIndex = gameState.inventory.findIndex(
-        item => item.name === action.payload.itemName,
+      existingItem = gameState.inventory.find(
+        item => item.item === action.payload.itemName,
       );
-      if (itemIndex > -1) {
-        gameState.inventory[itemIndex].quantity += 1;
+      if (existingItem) {
+        existingItem.quantity += 1;
       } else {
         gameState.inventory.push({item: action.payload.itemName, quantity: 1});
       }
       break;
-    // Add more cases for different types of actions
+
     default:
       throw new Error('Unknown action type');
   }
+
   return gameState;
 }
 
-// backend/src/controllers/gameController.js
+exports.processCommand = async (playerId, command) => {
+  const parsedAction = CommandParser.parse(command);
+  const gameState = await GameState.findOne({playerId});
 
-const actions = require('../game/actions');
-const gameService = require('../services/gameService');
+  if (!gameState) {
+    throw new Error('Game state not found');
+  }
 
-const processAction = async (req, res) => {
-  // Logic to process player action
-};
-
-const processCommand = async (playerId, command) => {
-  // Use the actions and gameService to process the command
-  // ...
-};
-
-module.exports = {
-  processAction,
-  processCommand,
+  const updatedGameState = await handleGameLogic(gameState, parsedAction);
+  await updatedGameState.save();
+  return updatedGameState;
 };
