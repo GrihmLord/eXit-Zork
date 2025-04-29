@@ -8,7 +8,7 @@
 
 ---
 
-**eXitZork** is a cutting-edge, text-based cyberpunk adventure inspired by the classic *Zork* and modern hacker narratives like *Mr. Robot*.
+**eXitZork** is a cutting-edge, text-based cyberpunk adventure inspired by the classic _Zork_ and modern hacker narratives like _Mr. Robot_.
 Built for the next generation of mobile players, eXitZork merges old-school storytelling with modern interactive design, delivering an immersive world where your choices shape the outcome.
 
 ---
@@ -153,8 +153,8 @@ Feel free to fork, improve, and build on it.
 
 ## 🌟 Acknowledgments
 
-- Classic inspirations like *Zork* and *Colossal Cave Adventure*
-- Modern inspirations from *Mr. Robot* and *Cyberpunk 2077*
+- Classic inspirations like _Zork_ and _Colossal Cave Adventure_
+- Modern inspirations from _Mr. Robot_ and _Cyberpunk 2077_
 - Special thanks to the open-source community for libraries, tools, and guidance
 
 ---

@@ -11,11 +11,15 @@ const HomeScreen = ({navigation}) => {
       />
       <Button
         title="Load Game"
-        onPress={() => {/* Logic to load a saved game */}}
+        onPress={() => {
+          /* Logic to load a saved game */
+        }}
       />
       <Button
         title="Settings"
-        onPress={() => {/* Navigate to settings screen */}}
+        onPress={() => {
+          /* Navigate to settings screen */
+        }}
       />
     </View>
   );

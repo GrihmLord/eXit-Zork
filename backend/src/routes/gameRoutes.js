@@ -10,11 +10,11 @@ router.post('/action', gameController.processAction);
 // Route to process commands
 router.post('/command', async (req, res) => {
   try {
-    const { command, playerId } = req.body;
+    const {command, playerId} = req.body;
     const result = await gameController.processCommand(playerId, command);
     res.json(result);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({message: error.message});
   }
 });
 

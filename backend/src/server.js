@@ -12,7 +12,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/exitZorkGame', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect('mongodb://localhost/exitZorkGame', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 

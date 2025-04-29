@@ -10,7 +10,9 @@ class CommandParser {
     const verb = parts[0];
     const noun = parts.slice(1).join(' ');
 
-    const command = this.commands.find(cmd => cmd.verb === verb && cmd.noun === noun);
+    const command = this.commands.find(
+      cmd => cmd.verb === verb && cmd.noun === noun,
+    );
     if (command) {
       return command.action(); // Execute the command's action and return the result
     } else {
@@ -38,7 +40,7 @@ class StoryEngine {
     if (selectedOption) {
       this.transitionToScene(selectedOption.leadsTo);
     } else {
-      console.log("Invalid option selected.");
+      console.log('Invalid option selected.');
     }
   }
 
@@ -48,7 +50,7 @@ class StoryEngine {
       this.currentScene = nextScene;
       this.displayCurrentScene();
     } else {
-      console.log("Scene not found.");
+      console.log('Scene not found.');
     }
   }
 

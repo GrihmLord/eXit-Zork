@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
-import { View, TextInput, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 
-const CustomTextInput = ({ placeholder, onCommandSubmit }) => {
+const CustomTextInput = ({placeholder, onCommandSubmit}) => {
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (text) => {
+  const handleInputChange = text => {
     // Input validation or preprocessing can be done here
     setInputValue(text);
   };

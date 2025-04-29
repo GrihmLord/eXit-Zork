@@ -1,9 +1,16 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "cSpell.words": [
-        "allprojects",
-        "buildscript",
-        "Swep"
-    ]
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "cSpell.words": [
+    "allprojects",
+    "androiddebugkey",
+    "androidx",
+    "buildscript",
+    "exitzorkgame",
+    "nexgen",
+    "pbxuser",
+    "proguard",
+    "Swep",
+    "swiperefreshlayout"
+  ]
 }

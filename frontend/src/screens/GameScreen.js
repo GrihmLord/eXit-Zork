@@ -8,14 +8,17 @@ const GameScreen = () => {
   const [story, setStory] = useState('The game begins...');
   const playerId = 'unique-player-id'; // This should be unique for each player
 
-  const handleCommandSubmit = async (command) => {
+  const handleCommandSubmit = async command => {
     // Append the command to the story first
     setStory(prevStory => `${prevStory}\n> ${command}`);
 
     try {
       // Send the command to the server
-      const response = await axios.post('http://localhost:3000/command', { command, playerId });
-      const {state, response: gameResponse } = response.data;
+      const response = await axios.post('http://localhost:3000/command', {
+        command,
+        playerId,
+      });
+      const {state, response: gameResponse} = response.data;
 
       // Update the story with the response from the server
       setStory(prevStory => `${prevStory}\n${gameResponse}`);

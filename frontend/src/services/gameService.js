@@ -3,11 +3,11 @@ const GameState = require('./models/GameState');
 class GameService {
   async processCommand(playerId, command) {
     // Retrieve the current game state for the player
-    let state = await GameState.findOne({ playerId });
+    let state = await GameState.findOne({playerId});
 
     if (!state) {
       // If no state exists, create a new one
-      state = new GameState({ playerId, ...initialState });
+      state = new GameState({playerId});
       await state.save();
     }
 
@@ -21,17 +21,17 @@ class GameService {
     // Generate a response based on the new state
     const response = this.generateResponse(newState);
 
-    return { state: newState, response };
+    return {state: newState, response};
   }
 
   parseCommand(command) {
     // Complex command parsing logic goes here
     // For example, split the command into action and target
     const [action, ...target] = command.split(' ');
-    return { action, target: target.join(' ') };
+    return {action, target: target.join(' ')};
   }
 
-  updateGameState(state, { action, target }) {
+  updateGameState(state, {action, target}) {
     // Update the game state based on the action and target
     // This is where you would handle different player actions
     // For simplicity, let's just log the action for now

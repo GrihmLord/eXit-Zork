@@ -6,7 +6,7 @@ const GameModel = require('../models/gameModel');
 // Function to process a command from a player
 async function processCommand(playerId, command) {
   // Retrieve the game state from the database
-  const gameState = await GameModel.findOne({ playerId });
+  const gameState = await GameModel.findOne({playerId});
 
   // Process the command based on the current game state
   // ...

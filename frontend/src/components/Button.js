@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 // A generic button component that can be reused throughout the app
-const Button = ({ title, onPress, style, textStyle }) => {
+const Button = ({title, onPress, style, textStyle}) => {
   return (
     <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
       <Text style={[styles.text, textStyle]}>{title}</Text>

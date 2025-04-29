@@ -32,7 +32,7 @@ export const makeMove = async (gameId, command) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ gameId, command }),
+      body: JSON.stringify({gameId, command}),
     });
     if (!response.ok) {
       throw new Error('Failed to make a move');
@@ -53,7 +53,7 @@ export const saveGameState = async (gameId, gameState) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ gameId, gameState }),
+      body: JSON.stringify({gameId, gameState}),
     });
     if (!response.ok) {
       throw new Error('Failed to save the game state');
@@ -68,32 +68,32 @@ export const saveGameState = async (gameId, gameState) => {
 
 // Function to call GPT-3 for generating dynamic game content
 export const generateGameContent = async (prompt, temperature = 0.7) => {
-    const OPENAI_API_URL = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-    const OPENAI_API_KEY = 'your-openai-api-key'; // Replace with your actual API key
-  
-    try {
-      const response = await fetch(OPENAI_API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        },
-        body: JSON.stringify({
-          prompt: prompt,
-          max_tokens: 150,
-          temperature: temperature,
-        }),
-      });
-  
-      if (!response.ok) {
-        throw new Error('Failed to generate content from GPT-3');
-      }
-  
-      const content = await response.json();
-      return content.choices[0].text.trim();
-    } catch (error) {
-      console.error('Error generating content from GPT-3:', error);
-      throw error;
+  const OPENAI_API_URL =
+    'https://api.openai.com/v1/engines/davinci-codex/completions';
+  const OPENAI_API_KEY = 'your-openai-api-key'; // Replace with your actual API key
+
+  try {
+    const response = await fetch(OPENAI_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        prompt: prompt,
+        max_tokens: 150,
+        temperature: temperature,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to generate content from GPT-3');
     }
-  };
-  
+
+    const content = await response.json();
+    return content.choices[0].text.trim();
+  } catch (error) {
+    console.error('Error generating content from GPT-3:', error);
+    throw error;
+  }
+};

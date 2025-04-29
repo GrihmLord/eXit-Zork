@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import CommandInput from './components/CommandInput';
 import GameDisplay from './components/GameDisplay';
+import {View} from 'react-native';
 
 // First Component
 const GameInterface = () => {
   // Removed unused state variables and functions
 
-  return (
-    <View style={{ padding: 20 }}>
-      {/* ... your existing JSX */}
-    </View>
-  );
+  return <View style={{padding: 20}}>{/* ... your existing JSX */}</View>;
 };
 
 // Second Component
 const GameApp = () => {
   const [gameMessage, setGameMessage] = useState('');
 
-  const handleCommandSubmit = async (command) => {
+  const handleCommandSubmit = async command => {
     // ... your existing code
   };
 
@@ -32,4 +29,4 @@ const GameApp = () => {
 // Choose which component to export, you can't export both as default
 export default GameInterface;
 // If you need to export the second component, do so with a named export
-export { GameApp };
+export {GameApp};

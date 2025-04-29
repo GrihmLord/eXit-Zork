@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, ScrollView } from 'react-native';
+import {Text, StyleSheet, ScrollView} from 'react-native';
 
-const StoryText = ({ text }) => {
+const StoryText = ({text}) => {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.storyText}>{text}</Text>

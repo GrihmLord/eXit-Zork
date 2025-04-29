@@ -6,21 +6,22 @@ const gameStateSchema = new Schema({
   playerId: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   currentRoom: {
     type: String,
-    required: true
+    required: true,
   },
-  inventory: [{
-    item: String,
-    quantity: Number
-  }],
+  inventory: [
+    {
+      item: String,
+      quantity: Number,
+    },
+  ],
   // ... other game state properties
 });
 
 module.exports = mongoose.model('GameState', gameStateSchema);
-
 
 // backend/src/game/GameState.js
 

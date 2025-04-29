@@ -4,16 +4,14 @@ import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
 const DetailsScreen = () => {
   const detailsData = {
     title: 'Mysterious Dungeon',
-    description: 'You find yourself in a dimly lit dungeon, filled with secrets and hidden dangers.',
+    description:
+      'You find yourself in a dimly lit dungeon, filled with secrets and hidden dangers.',
     image: 'https://via.placeholder.com/300x200.png?text=Mysterious+Dungeon',
   };
 
   return (
     <ScrollView style={styles.container}>
-      <Image
-        source={{ uri: detailsData.image }}
-        style={styles.image}
-      />
+      <Image source={{uri: detailsData.image}} style={styles.image} />
       <Text style={styles.title}>{detailsData.title}</Text>
       <Text style={styles.description}>{detailsData.description}</Text>
     </ScrollView>

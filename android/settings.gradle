@@ -1,16 +1,17 @@
-rootProject.name = "eXitZork"
-
-// New way (React Native 0.71+)
-apply plugin: "com.facebook.react"
-
-include(":app")
-
-includeBuild("../node_modules/@react-native/gradle-plugin")
-
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+pluginManagement {
     repositories {
-        google()
+        gradlePluginPortal()
         mavenCentral()
+        google()
+        // 👇 Tell Gradle to also look inside your node_modules!
+        maven {
+            url("$rootDir/../node_modules/react-native/android")
+        }
+    }
+    plugins {
+        id("com.facebook.react") version("0.72.17") apply(false)
     }
 }
+
+rootProject.name = "eXitZork"
+include ':app'
