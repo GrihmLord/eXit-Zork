@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet} from 'react-native';
 import StoryText from './StoryText';
 import CommandInput from './CommandInput';
 import axios from 'axios'; // Import axios for making HTTP requests
@@ -15,7 +15,7 @@ const GameScreen = () => {
     try {
       // Send the command to the server
       const response = await axios.post('http://localhost:3000/command', { command, playerId });
-      const { state, response: gameResponse } = response.data;
+      const {state, response: gameResponse } = response.data;
 
       // Update the story with the response from the server
       setStory(prevStory => `${prevStory}\n${gameResponse}`);

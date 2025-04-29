@@ -6,108 +6,182 @@
 ![GitHub forks](https://img.shields.io/github/forks/GrihmLord/eXitZork)
 ![License](https://img.shields.io/github/license/GrihmLord/eXitZork)
 
-eXitZork is an immersive text-based adventure game that combines the intrigue of cyberpunk narratives like Mr. Robot with the classic gameplay of Zork. Players will navigate through a rich narrative by typing commands, exploring environments, and solving puzzles, all while making decisions that shape the course of the story.
+---
 
-## Table of Contents
+**eXitZork** is a cutting-edge, text-based cyberpunk adventure inspired by the classic *Zork* and modern hacker narratives like *Mr. Robot*.
+Built for the next generation of mobile players, eXitZork merges old-school storytelling with modern interactive design, delivering an immersive world where your choices shape the outcome.
+
+---
+
+## 🚀 Table of Contents
 
 - [Introduction](#introduction)
+- [Features](#features)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Running the Tests](#running-the-tests)
-- [Deployment](#deployment)
+- [Running the App](#running-the-app)
+- [Testing](#testing)
 - [Built With](#built-with)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
 - [Authors](#authors)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+- [Mr. Clean Turbo Reset](#mr-clean-turbo-reset)
 
-## Introduction
+---
 
-eXitZork offers a text-based gaming experience enriched with complex characters, deep storylines, and moral quandaries. It is designed to be played on both iOS and Android platforms, built using React Native for a seamless cross-platform experience.
+## 📖 Introduction
 
-## Getting Started
+**eXitZork** reimagines the text adventure for the cyberpunk era —
+Navigate deep storylines, encounter branching decisions, solve cryptic puzzles, and face morally grey challenges in a neon-drenched dystopia.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Designed for **iOS** and **Android**, built with **React Native** for a seamless, cross-platform experience.
+Your mind is your weapon. Your words shape the future.
+
+---
+
+## ✨ Features
+
+- 🌐 **Interactive Story Engine** — Every choice matters
+- 🔥 **Cyberpunk Atmosphere** — A rich, dystopian world
+- 🎮 **Cross-Platform Support** — iOS and Android optimized
+- 🧩 **Puzzle Solving Mechanics** — Mind-bending challenges
+- 🛠 **Extendable Engine** — Add new story modules easily
+- 💬 **Command-based Gameplay** — Classic input-style system with modern UI/UX enhancements
+
+---
+
+## 🛠 Getting Started
+
+Follow these steps to set up and start playing:
+
+---
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+Ensure you have the following tools installed:
 
-- Node.js
-- npm or Yarn
-- React Native environment setup (including Android Studio and/or Xcode)
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- [Android Studio](https://developer.android.com/studio) and/or [Xcode](https://developer.apple.com/xcode/) for mobile development
+
+---
 
 ### Installation
 
-Follow these steps to get your development environment set up:
+Clone and install project dependencies:
 
-1. Clone the repository:
+```bash
+git clone https://github.com/GrihmLord/eXitZork.git
+cd eXitZork
+npm install
+```
 
-   ```bash
-   git clone https://github.com/GrihmLord/eXitZork.git
-   ```
+---
 
-2.Install dependencies:
+### Running the App
 
-   ```bash
-   cd eXitZork
-   npm install
-   ```
+Start Metro bundler:
 
-3.Start the React Native server:
+```bash
+npx react-native start
+```
 
-   ```bash
-   npx react-native start
-   ```
+Run on your desired platform:
 
-4.Run the application on your device or emulator:
+```bash
+npx react-native run-android
+# or
+npx react-native run-ios
+```
 
-   ```bash
-   npx react-native run-android
-   # or
-   npx react-native run-ios
-   ```
+---
 
-### Running the Tests
+### Testing
 
-To run the automated tests for this system, use:
+Run unit and integration tests:
 
 ```bash
 npm test
 ```
 
-### Deployment
+---
 
-Additional notes about how to deploy this on a live system will be provided later.
+## 🏗 Built With
 
-## Built With
+- [React Native](https://reactnative.dev/) — Mobile App Framework
+- [Node.js](https://nodejs.org/) — Runtime Environment
+- [Express](https://expressjs.com/) — Backend Framework
 
-- [React Native](https://reactnative.dev/) - The framework used for developing the mobile application.
-- [Node.js](https://nodejs.org/) - The JavaScript runtime used for the backend server.
-- [Express](https://expressjs.com/) - The web application framework used for the backend API.
+---
 
-## Contributing
+## 🤝 Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/GrihmLord/eXitZork/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+We love contributions!
+Please read our [CONTRIBUTING.md](https://github.com/GrihmLord/eXitZork/blob/main/CONTRIBUTING.md) guide to get started.
 
-## Versioning
+Pull requests are welcome!
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GrihmLord/eXitZork/tags).
+---
 
-## Authors
+## 📈 Versioning
 
-- **GrihmLord** - *Initial work* - [GrihmLord](https://github.com/GrihmLord)
+We use [Semantic Versioning (SemVer)](https://semver.org/) for managing releases.
 
-See also the list of [contributors](https://github.com/GrihmLord/eXitZork/contributors) who participated in this project.
+Check out available versions [here](https://github.com/GrihmLord/eXitZork/tags).
 
-## License
+---
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+## 👨‍💻 Authors
 
-## Acknowledgments
+- **GrihmLord** – Creator and lead developer → [GrihmLord GitHub](https://github.com/GrihmLord)
 
-- Hat tip to anyone whose code was used
-- Inspiration from classic text-based adventure games and modern cyberpunk fiction
-- Special thanks to the open-source community for their invaluable contributions
+See all contributors [here](https://github.com/GrihmLord/eXitZork/contributors).
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE.md).
+
+Feel free to fork, improve, and build on it.
+
+---
+
+## 🌟 Acknowledgments
+
+- Classic inspirations like *Zork* and *Colossal Cave Adventure*
+- Modern inspirations from *Mr. Robot* and *Cyberpunk 2077*
+- Special thanks to the open-source community for libraries, tools, and guidance
+
+---
+
+# 🧹 Mr. Clean Turbo Reset
+
+Sometimes, you just need a fresh start.
+We provide **Mr. Clean**, a **Turbo Reset PowerShell Script** for developers!
+
+### Quick Start:
+
+```bash
+.\fix-react-native.ps1
+```
+
+### What it does:
+
+- 🚫 Stops Metro Bundler processes
+- 🧹 Cleans `node_modules`, `package-lock.json`, `yarn.lock`
+- 🔥 Clears Metro cache
+- 🔄 Reinstalls clean dependencies
+- ⚡ Speeds up dev environment fixes
+
+**Script:** [`fix-react-native.ps1`](./fix-react-native.ps1)
+
+> 🧼 **When in doubt, call Mr. Clean.** Fast, reliable, polished!
+
+---
+
+# ⚡ eXitZork — Words are your weapon. Mr. Clean is your shield. :p

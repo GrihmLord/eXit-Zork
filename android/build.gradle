@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     ext {
         buildToolsVersion = "33.0.0"
@@ -15,14 +14,16 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.3.1")
-        // ✅ DO NOT include the react-native-gradle-plugin line for RN 0.72.6
+        classpath("com.android.tools.build:gradle:8.0.2") // <-- Only 8.0.2, not two!
+        classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
 
+// NOTE: Modern React Native (>0.71) expects dependencyResolutionManagement in settings.gradle now.
+// This section is mostly left for backward compatibility.
 allprojects {
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
 }

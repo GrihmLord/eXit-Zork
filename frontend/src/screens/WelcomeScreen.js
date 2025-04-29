@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react'; // Correct: Always import hooks ready
 import { View, Text, StyleSheet, Button } from 'react-native';
 
 const WelcomeScreen = ({ onStartGame }) => {

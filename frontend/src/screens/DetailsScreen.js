@@ -1,13 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Image} from 'react-native';
 
 const DetailsScreen = () => {
-  // Placeholder for details data
   const detailsData = {
     title: 'Mysterious Dungeon',
-    description: 'You find yourself in a dimly lit dungeon...',
-    image: 'path-to-dungeon-image',
-    // More details...
+    description: 'You find yourself in a dimly lit dungeon, filled with secrets and hidden dangers.',
+    image: 'https://via.placeholder.com/300x200.png?text=Mysterious+Dungeon',
   };
 
   return (
@@ -18,7 +16,6 @@ const DetailsScreen = () => {
       />
       <Text style={styles.title}>{detailsData.title}</Text>
       <Text style={styles.description}>{detailsData.description}</Text>
-      {/* Additional UI components to enrich the details screen */}
     </ScrollView>
   );
 };
@@ -43,7 +40,6 @@ const styles = StyleSheet.create({
     padding: 10,
     textAlign: 'justify',
   },
-  // Additional styles...
 });
 
 export default DetailsScreen;

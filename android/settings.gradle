@@ -1,6 +1,16 @@
-rootProject.name = 'eXitZorkGame'
+rootProject.name = "eXitZork"
 
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle")
-applyNativeModulesSettingsGradle(settings)
+// New way (React Native 0.71+)
+apply plugin: "com.facebook.react"
 
-include ':app'
+include(":app")
+
+includeBuild("../node_modules/@react-native/gradle-plugin")
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
