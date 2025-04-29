@@ -6,23 +6,12 @@ buildscript {
         targetSdkVersion = 33
         ndkVersion = "23.1.7779620"
     }
-
     repositories {
         google()
         mavenCentral()
-        maven { url("$rootDir/../node_modules/react-native/android") }
     }
-
     dependencies {
-        classpath("com.android.tools.build:gradle:8.0.2")
-        classpath("com.facebook.react:react-native-gradle-plugin:0.72.17") // ✅ MATCH VERSION
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url("$rootDir/../node_modules/react-native/android") }
+        classpath("com.android.tools.build:gradle:7.3.1")
+        classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }

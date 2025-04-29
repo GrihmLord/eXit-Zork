@@ -1,20 +1,7 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-        maven { url("$rootDir/../node_modules/react-native/android") }
-    }
-}
+rootProject.name = 'eXitZorkGame'
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        maven { url("$rootDir/../node_modules/react-native/android") }
-    }
-}
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
+applyNativeModulesSettingsGradle(settings)
 
-rootProject.name = "eXitZork"
-include(":app")
+include ':app'
+includeBuild('../node_modules/react-native-gradle-plugin')
